@@ -1,28 +1,89 @@
-import { useState } from "react";
-import "react-date-range/dist/styles.css"; // main css file
-import "react-date-range/dist/theme/default.css"; // theme css file
+import { addMonths } from "date-fns";
+// must import locale from date-fns as below
+// import { nb, dk } from "date-fns/locale";
+//
 
-import { DateRange } from "react-date-range";
+import { forwardRef } from "react";
+
+import { CiCalendar } from "react-icons/ci";
+import { FaCalendarAlt } from "react-icons/fa";
+
+import React, { useState } from "react";
+import "./bookingForm.css";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
+
+import customNbLocale from "../../utils/customNBLocale";
+
+const ExampleCustomInput = forwardRef(({ value, onClick, className }, ref) => (
+  <button className={className} onClick={onClick} ref={ref}>
+    <FaCalendarAlt />
+    {value}
+  </button>
+));
 
 function BookingForm() {
-  const [date, setDate] = useState([
-    {
-      startDate: new Date(),
-      endDate: null,
-      key: "selection",
-    },
-  ]);
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(null);
+
+  const onChange = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
+
+  // to set holidays in DatePicker use the holiday prop, setting directly/externaly an array of objects
+  // with date: "UTC date" var and holidayName: "name of holiday".
+  const holidays = [
+    { date: "2024-12-24", holidayName: "Julaften" },
+    { date: "2024-12-31", holidayName: "Nyttår" },
+    { date: "2025-01-01", holidayName: "Første nyttårsdag" },
+  ];
 
   return (
-    <form>
-      <DateRange
-        editableDateInputs={true}
-        onChange={(item) => setDate([item.selection])}
-        moveRangeOnFirstSelection={false}
-        ranges={date}
-      />
-      <p>bob</p>
-    </form>
+    <>
+      <div className="datePicker">
+        {/* <FaCalendarAlt /> */}
+        <DatePicker
+          customInput={<ExampleCustomInput />}
+          icon={<FaCalendarAlt />}
+          dateFormat="dd/MM/yyyy"
+          selected={startDate}
+          onChange={onChange}
+          startDate={startDate}
+          endDate={endDate}
+          selectsRange
+          minDate={new Date()}
+          //   isClearable={true}
+          //   withPortal
+          //   shouldCloseOnSelect={false}
+          holidays={holidays}
+          //   locale={nb}
+          locale={customNbLocale}
+          showPopperArrow={false}
+        />
+      </div>
+
+      {/* <DatePicker
+        dateFormat="dd/MM/yyyy"
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+        selectsStart
+        startDate={startDate}
+        endDate={endDate}
+      /> */}
+
+      {/* <DatePicker
+        dateFormat="dd/MM/yyyy"
+        selected={endDate}
+        onChange={(date) => setEndDate(date)}
+        selectsEnd
+        startDate={startDate}
+        endDate={endDate}
+        minDate={endDate}
+      /> */}
+    </>
   );
 }
 
