@@ -1,5 +1,7 @@
+import BookingForm from "../booking/BookingForm";
+
 function Overnatting() {
-  return <div>Overnatt hos oss hahaha</div>;
+  return <BookingForm />;
 }
 
 export default Overnatting;
