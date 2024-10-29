@@ -16,7 +16,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import customNbLocale from "../../utils/customNBLocale";
 
-const ExampleCustomInput = forwardRef(({ value, onClick, className }, ref) => (
+const CalendarInput = forwardRef(({ value, onClick, className }, ref) => (
   <button className={className} onClick={onClick} ref={ref}>
     <FaCalendarAlt />
     {value}
@@ -46,7 +46,7 @@ function BookingForm() {
       <div className="datePicker">
         {/* <FaCalendarAlt /> */}
         <DatePicker
-          customInput={<ExampleCustomInput />}
+          customInput={<CalendarInput />}
           icon={<FaCalendarAlt />}
           dateFormat="dd/MM/yyyy"
           selected={startDate}
@@ -64,25 +64,6 @@ function BookingForm() {
           showPopperArrow={false}
         />
       </div>
-
-      {/* <DatePicker
-        dateFormat="dd/MM/yyyy"
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
-        selectsStart
-        startDate={startDate}
-        endDate={endDate}
-      /> */}
-
-      {/* <DatePicker
-        dateFormat="dd/MM/yyyy"
-        selected={endDate}
-        onChange={(date) => setEndDate(date)}
-        selectsEnd
-        startDate={startDate}
-        endDate={endDate}
-        minDate={endDate}
-      /> */}
     </>
   );
 }

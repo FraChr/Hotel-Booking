@@ -1,0 +1,37 @@
+.booking {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.displayOptions{
+    width: 200px;
+}
+.options {
+    list-style: none;
+    position: absolute;
+    top: 1.5rem;
+    /* right: 31rem; */
+    background-color: gray;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    width: 200px;
+}
+
+.optionItem{
+    /* width: 200px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.optionCounter{
+    display: flex;
+    
+    align-items: center;
+    gap: 1.5rem;
+}

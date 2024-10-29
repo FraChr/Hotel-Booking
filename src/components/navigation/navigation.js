@@ -1,12 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
+import "./nav.css";
 
 function Nav() {
   return (
-    <nav>
-      <h1>
-        <Link to="/">Hotell navn</Link>
+    <nav className="mainNav">
+      <h1 className="hotelTitle">
+        <Link to="/">Hotell Nordlys</Link>
       </h1>
-      <ul>
+      <ul className="navList">
         <li>
           <NavLink exact to="/">
             Hjem

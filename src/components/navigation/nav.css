@@ -1,0 +1,24 @@
+.mainNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    
+}
+
+.hotelTitle {
+    text-decoration: none;
+}
+
+.navList {
+    list-style: none;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+
+.navList a, .hotelTitle a{
+    text-decoration: none;
+}
