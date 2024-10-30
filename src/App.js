@@ -10,18 +10,17 @@ import banner from "./assets/images/hotellNordlysWide.jpg";
 function App() {
   return (
     <>
-      <div className="imageContainer">
-        <img />
-      </div>
-      <Router>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/overnatting" element={<Overnatting />} />
-          <Route path="/meeting" element={<Meetings />} />
-          <Route path="/selskap" element={<Selskap />} />
-        </Routes>
-      </Router>
+      <header className="headerImg">
+        <Router>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/overnatting" element={<Overnatting />} />
+            <Route path="/meeting" element={<Meetings />} />
+            <Route path="/selskap" element={<Selskap />} />
+          </Routes>
+        </Router>
+      </header>
     </>
   );
 }

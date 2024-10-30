@@ -46,6 +46,8 @@ function BookingForm() {
       <div className="datePicker">
         {/* <FaCalendarAlt /> */}
         <DatePicker
+          // className="datePicker"
+          // calendarClassName="datePicker"
           customInput={<CalendarInput />}
           icon={<FaCalendarAlt />}
           dateFormat="dd/MM/yyyy"
@@ -62,6 +64,7 @@ function BookingForm() {
           //   locale={nb}
           locale={customNbLocale}
           showPopperArrow={false}
+          inline
         />
       </div>
     </>

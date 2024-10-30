@@ -1,9 +1,10 @@
-#root {
+/* #root {
     background-image: url('./assets/images/hotellNordlysWide.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-}
+    height: 50rem;
+} */
 
 html body{
     margin: 0;
@@ -11,7 +12,7 @@ html body{
 }
 html {
     font-size: 62.5%;
-    
+    background-color: #1b1b1b;
 }
 body{
     font-size: 1.6rem;

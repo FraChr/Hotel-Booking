@@ -4,7 +4,7 @@ import "./home.css";
 function Home() {
   return (
     <>
-      <div>
+      <div className="test">
         {/* <img
           src={hotellNordlys}
           alt="hotell nordlys med nordlys i bakgrunnen"
@@ -17,7 +17,7 @@ function Home() {
         src={hotellNordlys}
         alt="hotell nordlys med nordlys i bakgrunnen"
       /> */}
-        <img />
+
         <div className="textContainer">
           <h1>Hotell Nordlys</h1>
           <section>
@@ -29,6 +29,11 @@ function Home() {
               aktivitene i næromerådet, eller bare nyt roen og utsikten fra vårt
               hotell. Din drømmeferie begynner her!
             </p>
+            <div className="overnattingContainer">
+              <a href="overnatting" className="bookingLink">
+                Book Rom Her
+              </a>
+            </div>
           </section>
         </div>
       </div>

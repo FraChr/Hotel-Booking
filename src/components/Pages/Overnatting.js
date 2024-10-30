@@ -2,30 +2,32 @@ import BookingForm from "../booking/BookingForm";
 import "./overnatting.css";
 import { useEffect, useRef, useState } from "react";
 
+import Display from "../roomDisplay/Display";
+
 function Overnatting() {
   const [openOptions, setOpenOptions] = useState(false);
   const optionsRef = useRef(null);
 
-  const handleClickOutside = (event) => {
-    if (optionsRef.current && !optionsRef.current.contains(event.target)) {
-      setOpenOptions(false);
-    }
-  };
+  // const handleClickOutside = (event) => {
+  //   if (optionsRef.current && !optionsRef.current.contains(event.target)) {
+  //     setOpenOptions(false);
+  //   }
+  // };
 
-  const toggleOptions = () => {
-    setOpenOptions((prev) => !prev);
-  };
+  // const toggleOptions = () => {
+  //   setOpenOptions((prev) => !prev);
+  // };
 
-  useEffect(() => {
-    if (openOptions) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [openOptions]);
+  // useEffect(() => {
+  //   if (openOptions) {
+  //     document.addEventListener("mousedown", handleClickOutside);
+  //   } else {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   }
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [openOptions]);
 
   const [options, setOptions] = useState({
     adult: 1,
@@ -45,16 +47,17 @@ function Overnatting() {
   return (
     <>
       <div className="booking">
-        <BookingForm />
-        <input
+        <div className="bookingCalAmount">
+          <BookingForm />
+          {/* <input
           // onClick={() => setOpenOptions(!openOptions)}
-          onClick={toggleOptions}
+          // onClick={toggleOptions}
           className="displayOptions"
           type="text"
           readOnly
           placeholder={`${options.adult} Adult - ${options.children} Children - ${options.room} Room`}
-        />
-        {openOptions && (
+        /> */}
+          {/* {openOptions && ( */}
           <ul className="options" ref={optionsRef}>
             <li className="optionItem">
               <span className="optionText">Adult</span>
@@ -114,7 +117,10 @@ function Overnatting() {
               </div>
             </li>
           </ul>
-        )}
+          {/* )} */}
+        </div>
+
+        <Display />
       </div>
     </>
   );

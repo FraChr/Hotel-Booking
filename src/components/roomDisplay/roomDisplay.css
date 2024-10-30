@@ -1,0 +1,14 @@
+.roomDisplayContainer{
+    overflow: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    
+    scrollbar-color: #4d3729 #f1f1f1f1;
+    /* overflow-y: hidden; */
+    width: 50rem;
+    max-height: 65rem;
+
+    color: #ffffff;
+}
+
+

@@ -1,11 +1,54 @@
-/* .test {
-    background-image: url('../../assets/images/hotellNordlysWide.jpg');
+.headerImg {
+    background-image: url('../../assets/images/hotellNordlysWideBanner2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    /* min-height: 30rem; */
+    min-height: 28rem;
+    max-height: 28rem;
+    /* height: 100vh; */
     
 }
-.image {
+
+.bakgroundContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContainer{
+    color: #ffffff;
+    margin-top: 15rem;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    max-width: 70rem;
+}
+
+.textContainer h1{
+    text-align: center;
+}
+
+.textContainer p{
+    line-height: 2rem;
+}
+.overnattingContainer{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.bookingLink{
+    background-color: #29150C;
+    border-radius: 5px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-decoration: none;
+    color: #ffffff;
+    border: solid 1px #ffffff;
+}
+
+/* .image {
     background-size: ;
 } */
 /* .textContainer {
