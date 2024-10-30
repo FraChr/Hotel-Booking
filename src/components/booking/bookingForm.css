@@ -15,8 +15,8 @@
 }
 
 .datePicker {
-    max-width: 50px; /* Adjust the width as desired */
-    font-size: 1rem; /* Adjust font size if needed */
+    max-width: 50px;
+    font-size: 1rem; 
     
   }
   
@@ -34,10 +34,10 @@
 
   .datePicker .react-datepicker__day,
   .datePicker .react-datepicker__day-name {
-    width: 2.5rem; /* Adjust day cell width */
-    height: 2.5rem; /* Adjust day cell height */
+    width: 2.5rem; 
+    height: 2.5rem; 
    
-    font-size: 0.85rem; /* Adjust font size */
+    font-size: 0.85rem; 
 
     color: #ffffff;
     
@@ -51,5 +51,5 @@
   .datePicker .react-datepicker__current-month {
     background-color: #29150C;
     color: #ffffff;
-    border-radius: ;
+    
   }

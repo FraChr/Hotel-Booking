@@ -11,8 +11,8 @@ function Display() {
     <div className="roomDisplayContainer">
       <figure>
         <img
+          loading="lazy"
           src={hotelRoom1}
-          style={{ width: 200 }}
           alt="light hotel room width a beautifull view of the mountains"
         />
         <figcaption>
@@ -26,8 +26,8 @@ function Display() {
       </figure>
       <figure>
         <img
+          loading="lazy"
           src={hotelRoom2}
-          style={{ width: 200 }}
           alt="light hotel room width a beautifull view of the mountains"
         />
         <figcaption>
@@ -43,8 +43,8 @@ function Display() {
       </figure>
       <figure>
         <img
+          loading="lazy"
           src={hotelRoom3}
-          style={{ width: 200 }}
           alt="light hotel room width a beautifull view of the mountains"
         />
         <figcaption>
@@ -60,8 +60,8 @@ function Display() {
       </figure>
       <figure>
         <img
+          loading="lazy"
           src={hotelRoom4}
-          style={{ width: 200 }}
           alt="light hotel room width a beautifull view of the mountains"
         />
         <figcaption>
